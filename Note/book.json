@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    "expandable-chapters",
+    "anchor-navigation-ex",
+    "mathjax-pro",
+    "toolbar",
+    "code"
+  ],
+  "pluginsConfig": {
+    "anchor-navigation-ex": {
+      "showLevel": false, 
+      "showGoTop": false 
+    },
+    "toolbar": {
+      "buttons":
+      [
+	{
+	  "label": "GitHub",
+	  "icon": "fa fa-home",
+	  "url": "https://review.mcmz.xyz/",
+	  "target": "_self"
+	}
+      ]
+    }
+  }
+}
+
+

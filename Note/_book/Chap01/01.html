@@ -1,0 +1,464 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Language Overview · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.23">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter01 Introducing Julia
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    Language Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    Crash Course by Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    Plots, Images and Graphics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    Random Number and Monte Carlo Simulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    Integration with Other Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Language Overview</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#language-overview"><b></b>Language Overview</a></li></ul></div><h1 id="language-overview"><a name="language-overview" class="anchor-navigation-ex-anchor" href="#language-overview"><i class="fa fa-link" aria-hidden="true"></i></a>Language Overview</h1>
+<ul>
+<li><code>Plots</code> packages</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Plots
+
+x = collect(<span class="hljs-number">1</span>:<span class="hljs-number">10</span>)
+y = [xx+randn() <span class="hljs-keyword">for</span> xx <span class="hljs-keyword">in</span> x]
+
+plot(x,y,seriestype=:scatter)
+</code></pre>
+<ul>
+<li>two <strong>Monte Carlo</strong>  method examples and the usage of <code>@time</code> marco</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-comment"># The First Method</span>
+<span class="hljs-keyword">using</span> Statistics
+
+<span class="hljs-meta">@time</span> <span class="hljs-keyword">begin</span>
+    data = <span class="hljs-built_in">Float64</span>[];
+    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">10</span>^<span class="hljs-number">6</span>
+        group = <span class="hljs-built_in">Float64</span>[];
+        <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">5</span>*<span class="hljs-number">10</span>^<span class="hljs-number">2</span>
+            push!(group, rand())
+        <span class="hljs-keyword">end</span>
+        push!(data, mean(group))
+    <span class="hljs-keyword">end</span>
+    println(<span class="hljs-string">&quot;98% of the means lie in the estimamted range:&quot;</span>,
+        (quantile(data,<span class="hljs-number">0.01</span>)), (quantile(data,<span class="hljs-number">0.99</span>))
+    )
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># The Second Method is faster than the first</span>
+<span class="hljs-keyword">using</span> Statistics
+
+<span class="hljs-meta">@time</span> <span class="hljs-keyword">begin</span>
+    data = [mean(rand(<span class="hljs-number">5</span>*<span class="hljs-number">10</span>^<span class="hljs-number">2</span>)) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">10</span>^<span class="hljs-number">6</span>]
+    println(<span class="hljs-string">&quot;98% of the means lie in the estimamted range:&quot;</span>,
+        (quantile(data,<span class="hljs-number">0.01</span>)), (quantile(data,<span class="hljs-number">0.99</span>))
+    )
+<span class="hljs-keyword">end</span>
+</code></pre>
+<ul>
+<li>the example of <strong>variable scope</strong></li>
+</ul>
+<pre><code class="lang-julia">data = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]
+s = <span class="hljs-number">0</span>
+β,γ = <span class="hljs-number">2</span>,<span class="hljs-number">1</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:length(data)
+    print(i,<span class="hljs-string">&quot; &quot;</span>)
+    <span class="hljs-keyword">global</span> s
+
+
+    s += β*data[i]
+    data[i] *= -<span class="hljs-number">1</span>
+<span class="hljs-keyword">end</span>
+
+println(<span class="hljs-string">&quot;\nSum of data in extrnal scope: &quot;</span>, s)
+
+<span class="hljs-keyword">function</span> sumData(β)
+    s = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:length(data)
+        s += data[i] + γ
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">return</span> s
+<span class="hljs-keyword">end</span>
+println(<span class="hljs-string">&quot;Sum of data in a function: &quot;</span>, sumData(β/<span class="hljs-number">2</span>))
+<span class="hljs-meta">@show</span> s
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Chapter01 Introducing Julia">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02.html" class="navigation navigation-next " aria-label="Next page: Crash Course by Example">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Language Overview","level":"2.1.1","depth":2,"next":{"title":"Crash Course by Example","level":"2.1.2","depth":2,"path":"Chap01/02.md","ref":"Chap01/02.md","articles":[]},"previous":{"title":"Chapter01 Introducing Julia","level":"2.1","depth":1,"path":"Chap01/README.md","ref":"Chap01/README.md","articles":[{"title":"Language Overview","level":"2.1.1","depth":2,"path":"Chap01/01.md","ref":"Chap01/01.md","articles":[]},{"title":"Crash Course by Example","level":"2.1.2","depth":2,"path":"Chap01/02.md","ref":"Chap01/02.md","articles":[]},{"title":"Plots, Images and Graphics","level":"2.1.3","depth":2,"path":"Chap01/03.md","ref":"Chap01/03.md","articles":[]},{"title":"Random Number and Monte Carlo Simulation","level":"2.1.4","depth":2,"path":"Chap01/04.md","ref":"Chap01/04.md","articles":[]},{"title":"Integration with Other Languages","level":"2.1.5","depth":2,"path":"Chap01/05.md","ref":"Chap01/05.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","anchor-navigation-ex","mathjax-pro","toolbar","code","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"toolbar":{"buttons":[{"label":"GitHub","icon":"fa fa-home","url":"https://review.mcmz.xyz/","target":"_self"}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chap01/01.md","mtime":"2022-01-04T10:51:30.486Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2022-01-04T11:07:18.179Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

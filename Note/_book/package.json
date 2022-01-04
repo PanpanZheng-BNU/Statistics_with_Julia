@@ -1,0 +1,25 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-favicon": "^0.0.2",
+    "gitbook-plugin-insert-logo": "^0.1.5",
+    "gitbook-plugin-mathjax-pro": "^0.0.6",
+    "gitbook-plugin-mermaid-newface": "^4.0.2",
+    "gitbook-plugin-toolbar": "^0.6.0",
+    "mathjax": "^2.7.7"
+  },
+  "devDependencies": {
+    "honkit": "^3.6.23"
+  }
+}
