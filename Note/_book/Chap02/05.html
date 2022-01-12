@@ -1,0 +1,563 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Bayes' Rule · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.23">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="04.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chap01/">
+            
+                <a href="../Chap01/">
+            
+                    
+                    Chapter01 Introducing Julia
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chap01/01.html">
+            
+                <a href="../Chap01/01.html">
+            
+                    
+                    Language Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chap01/02.html">
+            
+                <a href="../Chap01/02.html">
+            
+                    
+                    Crash Course by Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chap01/03.html">
+            
+                <a href="../Chap01/03.html">
+            
+                    
+                    Plots, Images and Graphics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chap01/04.html">
+            
+                <a href="../Chap01/04.html">
+            
+                    
+                    Random Number and Monte Carlo Simulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chap01/05.html">
+            
+                <a href="../Chap01/05.html">
+            
+                    
+                    Integration with Other Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter02 Basic Probability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    Random Experiments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    Working with Sets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    Independence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    Conditional Probability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    Bayes' Rule
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Bayes' Rule</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#bayes-rule"><b></b>Bayes&apos; Rule</a></li><ul><li><span class="title-icon "></span><a href="#was-it-a-0-or-1"><b></b>Was it a 0 or 1?</a></li><li><span class="title-icon "></span><a href="#the-monty-hall-problem"><b></b>The Monty Hall Problem</a></li></ul></ul></div><h1 id="bayes-rule"><a name="bayes-rule" class="anchor-navigation-ex-anchor" href="#bayes-rule"><i class="fa fa-link" aria-hidden="true"></i></a>Bayes&apos; Rule</h1>
+<p><script type="math/tex; mode=display">
+\mathbb{P}(A\vert B) = \frac{\mathbb{P}(B\vert A)\mathbb{P}(A)}{\mathbb{P}(B)}
+</script></p>
+<ul>
+<li>Often we observe a <em>posterior outcome</em> or measurement, say the event <script type="math/tex; ">B</script>, and wish to evaluate the probability of a <em>prior condition</em>, say the event <script type="math/tex; ">A</script>. That is, given some measurement or knowledge we wish to evaluate how likely is it that a prior condition occurred. </li>
+</ul>
+<h2 id="was-it-a-0-or-1"><a name="was-it-a-0-or-1" class="anchor-navigation-ex-anchor" href="#was-it-a-0-or-1"><i class="fa fa-link" aria-hidden="true"></i></a>Was it a 0 or 1?</h2>
+<ul>
+<li>Considering a communication channel involving a stream of transmitted bits (0&apos;s and 1&apos;s), where 70% of the bits are 1, and the rest are 0. The channel is imperfect dut to physical disturbances such as interfering radio signals, and furthermore the bits received are sometimes distorted. Hence there is a chance(<script type="math/tex; ">\epsilon_{0}</script>) of interpreting a bit as 1 when it is actually 0, and similarly there is a chance (<script type="math/tex; ">\epsilon_{1}</script>) of interpreting a bit as 0 when it is actually 1.</li>
+<li>Now we received (<script type="math/tex; ">R_{x}</script>) a bit, and interpreted it as 1. This is the <em>posterior outcome</em>. What is the chance that it was in fact transmitted (<script type="math/tex; ">T_{x}</script>) as 1?
+<script type="math/tex; mode=display">
+\mathbb{P}(T_{x}\vert R_{x}) = \frac{\mathbb{P}(R_{x}\vert T_{x})\mathbb{P}(T_{x})}{\mathbb{P}(R_{x})} = \frac{(1-\epsilon_{1})0.7}{0.7(1-\epsilon_{1}) + 0.3\epsilon_{0}}
+</script></li>
+<li>If <script type="math/tex; ">\epsilon_{0} = 0.1</script> and <script type="math/tex; ">\epsilon_{1}=0.05</script>, then <script type="math/tex; ">\mathbb{P}(T_{x}\vert R_{x})=0.9568</script></li>
+<li>Solution by Julia</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Random
+Random.seed!(<span class="hljs-number">1</span>)
+
+N = <span class="hljs-number">10</span>^<span class="hljs-number">5</span>
+prob1 = <span class="hljs-number">0.7</span>
+eps0, eps1 = <span class="hljs-number">0.1</span>, <span class="hljs-number">0.05</span>
+
+filpWithProb(bit, prob) = rand() &lt; prob ? xor(bit,<span class="hljs-number">1</span>) : bit
+
+TxData = rand(N) .&lt; prob1
+RxData = [x == <span class="hljs-number">0</span> ? filpWithProb(x, eps0) : filpWithProb(x, eps1) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> TxData]
+
+numTx1 = <span class="hljs-number">0</span>
+totalRx1 = <span class="hljs-number">0</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:N
+    <span class="hljs-keyword">if</span> RxData[i] == <span class="hljs-number">1</span>
+        <span class="hljs-keyword">global</span> totalRx1 += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">global</span> numTx1 += TxData[i]
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+monteCarlo = numTx1/totalRx1
+analytic = ((<span class="hljs-number">1</span>-eps1)*<span class="hljs-number">0.7</span>)/(<span class="hljs-number">0.7</span>*(<span class="hljs-number">1</span>-eps1) + <span class="hljs-number">0.3</span>*eps0)
+
+println(<span class="hljs-string">&quot;Monte Carlo: &quot;</span>, monteCarlo, <span class="hljs-string">&quot;\t\tAnalytic: &quot;</span>, analytic)
+</code></pre>
+<h2 id="the-monty-hall-problem"><a name="the-monty-hall-problem" class="anchor-navigation-ex-anchor" href="#the-monty-hall-problem"><i class="fa fa-link" aria-hidden="true"></i></a>The Monty Hall Problem</h2>
+<ul>
+<li>Consider a contestant on television show, with three doors in front of her. One of doors contains a prize, while the other two are empty. The contestant is then asked to guess which door contains the prize, and she makes a random guess. Following this, the game show host (GSH) reveals an empty door form one of the two remaining doors not choosen.The conestant is then asked if she wishes to stay with their original choice, or if she wishes to switch to the remaining closed door.</li>
+<li>The two possible policies for the contestant are as follows:<ul>
+<li><strong>Policy I</strong>: Stay with their original choice after the door is revealed.</li>
+<li><strong>Policy II</strong>: Switch after the door is revealed.</li>
+</ul>
+</li>
+<li>Let <script type="math/tex; ">A_{i}</script> be the event that the prize is behind door <script type="math/tex; ">i</script>. Let <script type="math/tex; ">B_{i}</script> be the event that door <script type="math/tex; ">i</script> is revealed by the GSH, if the player initially choose door 1 and then the GSH revealed door 2, then
+<script type="math/tex; mode=display">
+\begin{split}
+\mathbb{P}(A_{1}\vert B_{2}) = \frac{\mathbb{P}(B_{2}\vert A_{1})\mathbb{P}(A_{1})}{\mathbb{P}(B_{2})} = \frac{\frac{1}{2}\times \frac{1}{3}}{\frac{1}{2}} = \frac{1}{3}\quad & (\textbf{Policy I}) \\
+\mathbb{P}(A_{3}\vert B_{2}) = \frac{\mathbb{P}(B_{2}\vert A_{3})\mathbb{P}(A_{3})}{\mathbb{P}(B_{2})} = \frac{1\times\frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}\quad & (\textbf{Policy II}) \\
+\end{split}
+</script></li>
+<li>Solution by Julia</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Random
+Random.seed!(<span class="hljs-number">1</span>)
+
+<span class="hljs-keyword">function</span> montyHall(switchPolicy)
+    prize, choice = rand(<span class="hljs-number">1</span>:<span class="hljs-number">3</span>), rand(<span class="hljs-number">1</span>:<span class="hljs-number">3</span>)
+    <span class="hljs-keyword">if</span> prize == choice
+        revealed = rand(setdiff(<span class="hljs-number">1</span>:<span class="hljs-number">3</span>, choice))
+    <span class="hljs-keyword">else</span>
+        revealed = rand(setdiff(<span class="hljs-number">1</span>:<span class="hljs-number">3</span>, [choice, prize]))
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-keyword">if</span> switchPolicy
+        choice = setdiff(<span class="hljs-number">1</span>:<span class="hljs-number">3</span>, [revealed, choice])[<span class="hljs-number">1</span>]
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">return</span> choice == prize
+<span class="hljs-keyword">end</span>
+
+N = <span class="hljs-number">10</span>^<span class="hljs-number">6</span>
+println(<span class="hljs-string">&quot;Success probability with policy I (stay): &quot;</span>, 
+    sum([montyHall(<span class="hljs-literal">false</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:N])/N)
+println(<span class="hljs-string">&quot;Success probability with policy II (switch): &quot;</span>,
+    sum([montyHall(<span class="hljs-literal">true</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:N])/N)
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Conditional Probability">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Bayes' Rule","level":"3.1.5","depth":2,"previous":{"title":"Conditional Probability","level":"3.1.4","depth":2,"path":"Chap02/04.md","ref":"Chap02/04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","anchor-navigation-ex","mathjax-pro","toolbar","code","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"toolbar":{"buttons":[{"label":"GitHub","icon":"fa fa-home","url":"https://review.mcmz.xyz/","target":"_self"}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chap02/05.md","mtime":"2022-01-05T02:22:26.092Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2022-01-12T02:20:26.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

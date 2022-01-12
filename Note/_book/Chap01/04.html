@@ -206,6 +206,97 @@
     
 
     
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Chap02/">
+            
+                <a href="../Chap02/">
+            
+                    
+                    Chapter02 Basic Probability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Chap02/01.html">
+            
+                <a href="../Chap02/01.html">
+            
+                    
+                    Random Experiments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../Chap02/02.html">
+            
+                <a href="../Chap02/02.html">
+            
+                    
+                    Working with Sets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../Chap02/03.html">
+            
+                <a href="../Chap02/03.html">
+            
+                    
+                    Independence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../Chap02/04.html">
+            
+                <a href="../Chap02/04.html">
+            
+                    
+                    Conditional Probability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../Chap02/05.html">
+            
+                <a href="../Chap02/05.html">
+            
+                    
+                    Bayes' Rule
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
 
     <li class="divider"></li>
 
@@ -250,6 +341,76 @@
                                 <section class="normal markdown-section">
                                 
                                 <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#random-number-and-monte-carlo-simulation"><b></b>Random Number and Monte Carlo Simulation</a></li></ul></div><h1 id="random-number-and-monte-carlo-simulation"><a name="random-number-and-monte-carlo-simulation" class="anchor-navigation-ex-anchor" href="#random-number-and-monte-carlo-simulation"><i class="fa fa-link" aria-hidden="true"></i></a>Random Number and Monte Carlo Simulation</h1>
+<ul>
+<li><code>Random.seed!()</code></li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Random
+
+Random.seed!(<span class="hljs-number">1974</span>)
+println(<span class="hljs-string">&quot;Seed 1974: &quot;</span>, rand(), <span class="hljs-string">&quot;\t&quot;</span>, rand(), <span class="hljs-string">&quot;\t&quot;</span>, rand())
+Random.seed!(<span class="hljs-number">1975</span>)
+println(<span class="hljs-string">&quot;Seed 1975: &quot;</span>, rand(), <span class="hljs-string">&quot;\t&quot;</span>, rand(), <span class="hljs-string">&quot;\t&quot;</span>, rand())
+Random.seed!(<span class="hljs-number">1974</span>)
+println(<span class="hljs-string">&quot;Seed 1974: &quot;</span>, rand(), <span class="hljs-string">&quot;\t&quot;</span>, rand(), <span class="hljs-string">&quot;\t&quot;</span>, rand())
+</code></pre>
+<ul>
+<li><strong>Monte Carlo Simulation</strong>
+<script type="math/tex; mode=display">
+\hat{\pi} = 4\cdot \frac{\text{Number of points with } x^{2} + y^{2} \le 1}{\text{Total number of points}}
+</script></li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-comment"># Method 1</span>
+<span class="hljs-keyword">using</span> Plots, Random
+totalNumberOfPoints=<span class="hljs-number">10</span>^<span class="hljs-number">5</span>
+Random.seed!(<span class="hljs-number">1</span>);
+points = [eachcol(rand(<span class="hljs-number">2</span>,totalNumberOfPoints))...];
+inPoints = findall(x -&gt; x[<span class="hljs-number">1</span>]^<span class="hljs-number">2</span> + x[<span class="hljs-number">2</span>]^<span class="hljs-number">2</span> &lt;= <span class="hljs-number">1</span>,points)
+println(<span class="hljs-string">&quot;the approximated value of pi is &quot;</span>, <span class="hljs-number">4</span>*length(inPoints)/totalNumberOfPoints)
+scatter(first.(points[inPoints]),last.(points[inPoints]),ms=<span class="hljs-number">1</span>,msw=<span class="hljs-number">0</span>, size=(<span class="hljs-number">400</span>,<span class="hljs-number">400</span>));
+outPoints = findall(x -&gt; x[<span class="hljs-number">1</span>]^<span class="hljs-number">2</span> + x[<span class="hljs-number">2</span>]^<span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>,points)
+scatter!(first.(points[outPoints]),last.(points[outPoints]),ms=<span class="hljs-number">1</span>, msw=<span class="hljs-number">0</span>, size=(<span class="hljs-number">400</span>,<span class="hljs-number">400</span>), legend=:none)
+
+<span class="hljs-comment"># Method 2</span>
+<span class="hljs-keyword">using</span> Random, LinearAlgebra, Plots
+Random.seed!()
+
+N = <span class="hljs-number">10</span>^<span class="hljs-number">5</span>;
+data = [[rand(),rand()] <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:N];
+indata = filter((x) -&gt; (norm(x) &lt;= <span class="hljs-number">1</span>), data);
+outdata = filter((x) -&gt; (norm(x) &gt; <span class="hljs-number">1</span>), data);
+
+
+
+scatter(first.(indata), last.(indata), c=:blue, ms=<span class="hljs-number">1</span>, msw=<span class="hljs-number">0</span>)
+scatter!(first.(outdata), last.(outdata), c=:red, ms=<span class="hljs-number">1</span>, msw=<span class="hljs-number">0</span>,
+    xlims=(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>), ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>), legend=:none, ratio=:equal)
+</code></pre>
+<ul>
+<li>Inside a Simple Pseudorandom Number Generator<ul>
+<li><em>Linear Congruential Generators</em>: <script type="math/tex; ">x_{n+1} = (ax_{n}+c) \mod m</script></li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Plots, LaTeXStrings, Measures
+
+a, c, m = <span class="hljs-number">69069</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>^<span class="hljs-number">32</span>
+next(z) = (a*z + c) % m
+
+N = <span class="hljs-number">10</span>^<span class="hljs-number">6</span>
+data = <span class="hljs-built_in">Array</span>{<span class="hljs-built_in">Float64</span>,<span class="hljs-number">1</span>}(<span class="hljs-literal">undef</span>,N)
+
+x = <span class="hljs-number">808</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:N
+    data[i] = x/m
+    <span class="hljs-keyword">global</span> x = next(x)
+<span class="hljs-keyword">end</span>
+
+p1 = scatter(<span class="hljs-number">1</span>:<span class="hljs-number">1000</span>, data[<span class="hljs-number">1</span>:<span class="hljs-number">1000</span>],
+    c=:blue, m=<span class="hljs-number">4</span>, msw=<span class="hljs-number">0</span>, xlabel=<span class="hljs-string">L&quot;n&quot;</span>, ylabel=<span class="hljs-string">L&quot;x_n&quot;</span>)
+p2 = histogram(data, bins=<span class="hljs-number">50</span>, normed=:<span class="hljs-literal">true</span>,
+    ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">1.1</span>), xlabel=<span class="hljs-string">&quot;Support&quot;</span>, ylabel=<span class="hljs-string">&quot;Density&quot;</span>)
+plot(p1,p2, size=(<span class="hljs-number">800</span>,<span class="hljs-number">400</span>), legend=:none, margin=<span class="hljs-number">5</span>mm)
+</code></pre>
 </body></html>
                                 
                                 </section>
@@ -293,7 +454,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Random Number and Monte Carlo Simulation","level":"2.1.4","depth":2,"next":{"title":"Integration with Other Languages","level":"2.1.5","depth":2,"path":"Chap01/05.md","ref":"Chap01/05.md","articles":[]},"previous":{"title":"Plots, Images and Graphics","level":"2.1.3","depth":2,"path":"Chap01/03.md","ref":"Chap01/03.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","anchor-navigation-ex","mathjax-pro","toolbar","code","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"toolbar":{"buttons":[{"label":"GitHub","icon":"fa fa-home","url":"https://review.mcmz.xyz/","target":"_self"}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chap01/04.md","mtime":"2022-01-04T09:52:41.104Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2022-01-04T11:07:18.179Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Random Number and Monte Carlo Simulation","level":"2.1.4","depth":2,"next":{"title":"Integration with Other Languages","level":"2.1.5","depth":2,"path":"Chap01/05.md","ref":"Chap01/05.md","articles":[]},"previous":{"title":"Plots, Images and Graphics","level":"2.1.3","depth":2,"path":"Chap01/03.md","ref":"Chap01/03.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","anchor-navigation-ex","mathjax-pro","toolbar","code","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"toolbar":{"buttons":[{"label":"GitHub","icon":"fa fa-home","url":"https://review.mcmz.xyz/","target":"_self"}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chap01/04.md","mtime":"2022-01-04T11:37:27.447Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2022-01-12T02:20:26.909Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
