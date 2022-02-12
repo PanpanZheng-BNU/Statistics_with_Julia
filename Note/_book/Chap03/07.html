@@ -1,0 +1,878 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Joint Distributions and Covariance · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.23">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chap01/">
+            
+                <a href="../Chap01/">
+            
+                    
+                    Chapter01 Introducing Julia
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chap01/01.html">
+            
+                <a href="../Chap01/01.html">
+            
+                    
+                    Language Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chap01/02.html">
+            
+                <a href="../Chap01/02.html">
+            
+                    
+                    Crash Course by Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chap01/03.html">
+            
+                <a href="../Chap01/03.html">
+            
+                    
+                    Plots, Images and Graphics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chap01/04.html">
+            
+                <a href="../Chap01/04.html">
+            
+                    
+                    Random Number and Monte Carlo Simulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chap01/05.html">
+            
+                <a href="../Chap01/05.html">
+            
+                    
+                    Integration with Other Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Chap02/">
+            
+                <a href="../Chap02/">
+            
+                    
+                    Chapter02 Basic Probability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Chap02/01.html">
+            
+                <a href="../Chap02/01.html">
+            
+                    
+                    Random Experiments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../Chap02/02.html">
+            
+                <a href="../Chap02/02.html">
+            
+                    
+                    Working with Sets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../Chap02/03.html">
+            
+                <a href="../Chap02/03.html">
+            
+                    
+                    Independence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../Chap02/04.html">
+            
+                <a href="../Chap02/04.html">
+            
+                    
+                    Conditional Probability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../Chap02/05.html">
+            
+                <a href="../Chap02/05.html">
+            
+                    
+                    Bayes' Rule
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter03 Probability Distributions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    Random Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    Moment-Based Descriptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    Functions Describing Distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    Distributions and Related Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    Families of Discrete Distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    Families of Continuous Distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    Joint Distributions and Covariance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Joint Distributions and Covariance</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#joint-distributions-and-covariance"><b></b>Joint Distributions and Covariance</a></li><ul><li><span class="title-icon "></span><a href="#the-joint-pdf"><b></b>The Joint PDF</a></li><ul><li><span class="title-icon "></span><a href="#example"><b></b>Example</a></li></ul><li><span class="title-icon "></span><a href="#covariance-and-vectorized-moments"><b></b>Covariance and Vectorized Moments</a></li><li><span class="title-icon "></span><a href="#linear-combinations-and-transform"><b></b>Linear Combinations and Transform</a></li><li><span class="title-icon "></span><a href="#the-cholesky-decomposition-and-generating-random-vectors"><b></b>The Cholesky Decomposition and Generating Random Vectors</a></li><li><span class="title-icon "></span><a href="#bivariate-normal"><b></b>Bivariate Normal</a></li></ul></ul></div><h1 id="joint-distributions-and-covariance"><a name="joint-distributions-and-covariance" class="anchor-navigation-ex-anchor" href="#joint-distributions-and-covariance"><i class="fa fa-link" aria-hidden="true"></i></a>Joint Distributions and Covariance</h1>
+<ul>
+<li>We now consider pairs and vectors of random variables. In general, in a probability spce, we amy define multiple random vairables, <script type="math/tex; ">X_{1},\cdots, X_{n}</script>, where we consider the vector or tuple, <script type="math/tex; ">\pmb{X} = (X_{1}, \cdots, X_{n})</script>, as a <strong><em>random vector.</em></strong> A key question deals with representing and evaluating probabilities of the form <script type="math/tex; ">\mathbb{P}(\pmb{X}\in B)</script>, where <script type="math/tex; ">B</script> is some subset <script type="math/tex; ">\mathbb{R}^{n}</script>. Our focus here is on the case of a pair of random vairables <script type="math/tex; ">(X,Y)</script>, which are continuous and have a density function. The probability distribution of <script type="math/tex; ">(X,Y)</script> is called a <strong><em>bivariate distribution</em></strong>, and more generally the probability of <script type="math/tex; ">X</script> is called a <strong><em>multivariate distribution</em></strong>.</li>
+</ul>
+<h2 id="the-joint-pdf"><a name="the-joint-pdf" class="anchor-navigation-ex-anchor" href="#the-joint-pdf"><i class="fa fa-link" aria-hidden="true"></i></a>The Joint PDF</h2>
+<ul>
+<li>A function, <script type="math/tex; ">f_{\pmb{X}}: \mathbb{R}^{n} \to \mathbb{R}</script>, is said to be a <strong><em>Joint Probability Density Function (PDF)</em></strong> if for any input, <script type="math/tex; ">x_{1},\cdots,x_{n}</script>, it holds that <script type="math/tex; ">f_{\pmb{X}}(x_{1},x_{2},\cdots, x_{n})\ge 0</script> and
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}f_{\pmb{X}}(x_{1}, x_{2}, \cdots, x_{n})dx_{1}dx_{2}\cdots dx_{n} = 1
+</script></li>
+<li>Hence, if we consider now <script type="math/tex; ">B\subset \mathbb{R}^{n}</script>, then the probabilities of a random vector <script type="math/tex; ">X</script>, distributed with density <script type="math/tex; ">f_{\pmb{X}}</script>, can be evaluated by
+<script type="math/tex; mode=display">
+\mathbb{P}(\pmb{X}\in B) = \int_{B}f_{\pmb{X}}(\pmb{x})d\pmb{x}.
+</script></li>
+</ul>
+<h3 id="example"><a name="example" class="anchor-navigation-ex-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h3>
+<ul>
+<li>Let <script type="math/tex; ">\pmb{X} = (X,Y)</script> and consider the joint density, simply denoted <script type="math/tex; ">f(\cdot, \cdot)</script>,
+<script type="math/tex; mode=display">
+f(x,y) = 
+\begin{cases}
+  \frac{9}{8}(4x + y)\sqrt{(1-x)(1-y)} & \quad    x\in[0,1], y\in[0,1],\\
+  0, &\quad \text{otherwise.}
+\end{cases}
+</script></li>
+<li>Set <script type="math/tex; ">B = \{(x,y)\vert x<y\}</script>, then
+<script type="math/tex; mode=display">
+\mathbb{P}\bigg((x,y) \in B\bigg) = \int_{x=0}^{1}\int_{y=x}^{1}f(x,y)dydx = \frac{31}{80}=0.3875.
+</script></li>
+<li>We can obtain the <strong><em>marginal densities</em></strong> of <script type="math/tex; ">X</script> and <script type="math/tex; ">Y</script>, denoted <script type="math/tex; ">f_{X}(\cdot)</script> and <script type="math/tex; ">f_{Y}(\cdot)</script>:
+<script type="math/tex; mode=display">
+f_{X}(x) = \int_{y=0}^{1}f(x,y)dy\quad \text{and}\quad f_{Y}(y) = \int_{x=0}^{1}f(x,y) dx \\
+\Downarrow
+\\
+f_{X}(x) = \frac{3}{10}\sqrt{1-x}(1+10x)\quad \text{and}\quad f_{Y}(y) = \frac{3}{20}\sqrt{1-y}(8+5y).
+</script></li>
+<li>In general, the random vairbles <script type="math/tex; ">X</script> and <script type="math/tex; ">Y</script> are said to be <strong><em>independent</em></strong> if <script type="math/tex; ">f(x,y) = f_{X}(x)f_{Y}(y)</script>. But in our current example, this is not the case. Furthermore, whenever we have two densities of scalar random variables, we may multiply them to make the joint distribution of the random vector composed of independent random varible. 
+<script type="math/tex; mode=display">
+\tilde{f}(x,y) = f_{X}(x)f_{Y}(y) = \frac{9}{200}\sqrt{(1-x)(1-y)}(1+10x)(8+5y)
+</script></li>
+<li>Observe that <script type="math/tex; ">\tilde{f}(x,y)\ne f(x,y)</script>. Hence, while both bivariate distributions have the same marginal distribution, they are different bivariate distributions and hence describe different relationships between <script type="math/tex; ">X</script> and <script type="math/tex; ">Y</script>.</li>
+<li>The <strong><em>conditional density</em></strong> of <script type="math/tex; ">X</script> given <script type="math/tex; ">Y</script>. It is denoted by <script type="math/tex; ">f_{X\vert Y=y}(x)</script> and describes the distribution of the random variable <script type="math/tex; ">X</script>, given the specific value <script type="math/tex; ">Y=y</script>.
+<script type="math/tex; mode=display">
+f_{X\vert Y=y}(x) = \frac{f(x,y)}{f_{Y}(y)} = \frac{f(x,y)}{\int_{x=0}^{1}f(x,y)dx}
+</script></li>
+<li>Simulation by Julia</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Plots, LaTeXStrings, Measures;gr()
+
+delta = <span class="hljs-number">0.01</span>
+grid = <span class="hljs-number">0</span>:delta:<span class="hljs-number">1</span>
+f(x,y) = <span class="hljs-number">9</span>/<span class="hljs-number">8</span>*(<span class="hljs-number">4</span>x+y)*sqrt((<span class="hljs-number">1</span>-x)*(<span class="hljs-number">1</span>-y))
+z = [f(x,y) <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> grid, x <span class="hljs-keyword">in</span> grid]
+
+densityIntegral = sum(z)*delta^<span class="hljs-number">2</span>
+println(<span class="hljs-string">&quot;2-dimensional Riemann sum over density: &quot;</span>,densityIntegral)
+
+probB = sum([sum([f(x,y)*delta <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> x:delta:<span class="hljs-number">1</span>])*delta <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> grid])
+println(<span class="hljs-string">&quot;2-dimensional Riemann sum to evaluate probability: &quot;</span>, probB)
+
+p1 = surface(grid, grid, z,
+    c=cgrad([:blue, :red]), la=<span class="hljs-number">1</span>, camera=(<span class="hljs-number">60</span>,<span class="hljs-number">50</span>),
+    ylabel=<span class="hljs-string">&quot;y&quot;</span>, zlabel=<span class="hljs-string">L&quot;f(x,y)&quot;</span>, legend=:none)
+p2 = contourf(grid, grid, z,
+    c=cgrad([:blue, :red]))
+p3 = contour!(grid, grid, z,
+    c=:black, xlims=(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>), ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>), ylabel=<span class="hljs-string">&quot;y&quot;</span>, ratio=:equal)
+
+plot(p1,p2, size=(<span class="hljs-number">800</span>, <span class="hljs-number">400</span>), xlabel=<span class="hljs-string">&quot;x&quot;</span>, margin=<span class="hljs-number">5</span>mm)
+</code></pre>
+<h2 id="covariance-and-vectorized-moments"><a name="covariance-and-vectorized-moments" class="anchor-navigation-ex-anchor" href="#covariance-and-vectorized-moments"><i class="fa fa-link" aria-hidden="true"></i></a>Covariance and Vectorized Moments</h2>
+<ul>
+<li>Given two random variables, <script type="math/tex; ">X</script> and <script type="math/tex; ">Y</script>, with respective means, <script type="math/tex; ">\mu_{X}</script> and <script type="math/tex; ">\mu_{Y}</script>, the <strong><em>covariance</em></strong> is defined by
+<script type="math/tex; mode=display">
+{\rm Cov}(X,Y) = \mathbb{E}[(X-\mu_{X})(Y-\mu_{Y})] = \mathbb{E}[XY] - \mu_{X}\mu_{Y}
+</script></li>
+<li>The covariance is a common measure of the relationship between the two random variables, where if <script type="math/tex; ">{\rm Cov}(X,Y)=0</script>, we say the random variable are <strong><em>unrelated</em></strong>. Furthermore, if <script type="math/tex; ">{\rm Cov}(X,Y)\ne 0</script>, the sign of the covariance gives an indication of the direction of the relationship.</li>
+<li>The <strong><em>correlation coefficient</em></strong> is
+<script type="math/tex; mode=display">
+\rho_{XY} = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\text{Var}(Y)}}
+</script></li>
+<li>It is a normalized form of the covariance with <script type="math/tex; ">-1\le \rho_{XY}\le 1</script>. Values nearing <script type="math/tex; ">\pm 1</script> indicate a very strong <strong><em>linear relationship</em></strong> between <script type="math/tex; ">X</script> and <script type="math/tex; ">Y</script>, whereas values near or at <script type="math/tex; ">0</script> indicate a lack of a linear relationship.</li>
+<li>Note that if <script type="math/tex; ">X</script> and <script type="math/tex; ">Y</script> are independent random variables, then <script type="math/tex; ">\text{Cov}(X,Y)=0</script> and hence <script type="math/tex; ">\rho_{XY}=0</script>. However, the opposite case does not always hold, since, in general, <script type="math/tex; ">\rho_{XY}=0</script> does not imply indepenence. Nevertheless as described below, for jointly normal random variables it does.</li>
+<li>Consider a random vector <script type="math/tex; ">\pmb{X}=(X_{1},\cdots,X_{n})</script>, taken as a column vector. It can be described by moments in an analogous manner to a scalar random variable. A key quantity is the <strong><em>mean vector</em></strong>,
+<script type="math/tex; mode=display">
+\mu_{X}:= \big[\mathbb{E}[X_{1}], \mathbb{E}[X_{2}], \cdots, \mathbb{E}[X_{n}]\big]^{\top}
+</script></li>
+<li>Furthermore, the <strong><em>covariance matrix</em></strong> is the matrix defined by the expectation of the random matrix given by <script type="math/tex; ">(\pmb{X}-\mu_{X})(\pmb{X}-\mu_{X})^{\top}</script>, and is expressed as
+<script type="math/tex; mode=display">
+\Sigma_{\pmb{X}}=\text{Cov}(\pmb{X})=\mathbb{E}[(\pmb{X}-\mu_{X})(\pmb{X}-\mu_{X})^{\top}]
+</script></li>
+<li>The <script type="math/tex; ">i</script>, <script type="math/tex; ">j</script>-th element of <script type="math/tex; ">\Sigma_{\pmb{X}}</script> is <script type="math/tex; ">\text{Cov}(X_{i},X_{j})</script> and hence the diagonal elements are the variances.</li>
+</ul>
+<h2 id="linear-combinations-and-transform"><a name="linear-combinations-and-transform" class="anchor-navigation-ex-anchor" href="#linear-combinations-and-transform"><i class="fa fa-link" aria-hidden="true"></i></a>Linear Combinations and Transform</h2>
+<ul>
+<li>The <strong><em>linear transformations</em></strong> applied to random vectors. For any collection of random variables,
+<script type="math/tex; mode=display">
+\mathbb{E}[X_{1}+\cdots+X_{n}] = \mathbb{E}[X_{1}]+\cdots+\mathbb{E}[X_{n}]
+</script></li>
+<li>For <strong><em>uncorrelated</em></strong> random variables,
+<script type="math/tex; mode=display">
+\text{Var}(X_{1}+\cdots+X_{n}) = \text{Var}(X_{1}) +\cdots + \text{Var}(X_{n})
+</script></li>
+<li>More generally, if we allows the random variables tobe correlated, then
+<script type="math/tex; mode=display">
+\text{Var}(X_{1}+\cdots+X_{n}) = \text{Var}(X_{1}) +\cdots + \text{Var}(X_{n}) + 2\sum_{i<j}\text{Cov}(X_{i},X_{j})
+</script></li>
+<li>Note that the right-hand side of forluma above is the sum of the elements of the matrix <script type="math/tex; ">\Sigma_{\pmb{X}}</script>. This is a special case of a more general <strong><em>affine transformation</em></strong>, where we take a random vector <script type="math/tex; ">\pmb{X}=(X_{1},\cdot, X_{n})</script> with covariance matrix <script type="math/tex; ">\Sigma_{\pmb{X}}</script>, and an <script type="math/tex; ">m\times n </script> matrix <script type="math/tex; ">A</script> and <script type="math/tex; ">m</script> vector <script type="math/tex; ">\pmb{b}</script>, we then set
+<script type="math/tex; mode=display">
+\pmb{Y} = A\pmb{X} +\pmb{b}
+</script></li>
+<li>In this case, the new random vector <script type="math/tex; ">\pmb{Y}</script> exhibits mean and covariance
+<script type="math/tex; mode=display">
+\mathbb{E}[\pmb{Y}] = A \mathbb{E}[\pmb{Y}]+\pmb{b}\quad \text{and}\quad \text{Cov}(\pmb{Y})=A\Sigma_{\pmb{X}}A^{\top}
+</script></li>
+</ul>
+<h2 id="the-cholesky-decomposition-and-generating-random-vectors"><a name="the-cholesky-decomposition-and-generating-random-vectors" class="anchor-navigation-ex-anchor" href="#the-cholesky-decomposition-and-generating-random-vectors"><i class="fa fa-link" aria-hidden="true"></i></a>The Cholesky Decomposition and Generating Random Vectors</h2>
+<ul>
+<li>Suppose that you wish to create an <script type="math/tex; ">n</script>-dimensional random vector <script type="math/tex; ">\pmb{Y}</script> with some specified mean vector <script type="math/tex; ">\mu_{\pmb{Y}}</script> and covariance matrix <script type="math/tex; ">\Sigma_{\pmb{Y}}</script>. That is, <script type="math/tex; ">\mu_{\pmb{Y}}</script> and <script type="math/tex; ">\Sigma_{\pmb{Y}}</script> are known.</li>
+<li>If we are given a random vector <script type="math/tex; ">X</script> with zero-mean and identity-covariance matrix <script type="math/tex; ">(\Sigma_{\pmb{X}}=I)</script>. And apply the <strong><em>affine transformation</em></strong> on <script type="math/tex; ">\pmb{X}</script> with <script type="math/tex; ">\pmb{b} = \mu_{\pmb{Y}}</script> and a matrix <script type="math/tex; ">A</script> that satisfies
+<script type="math/tex; mode=display">
+\Sigma_{\pmb{Y}} = AA^{\top}
+</script></li>
+<li>The question is now how to find a matrix <script type="math/tex; ">A</script>. For this the <strong><em>Cholesky decomposition</em></strong> comes as an aid and finds a matrix <script type="math/tex; ">A</script>.
+<script type="math/tex; mode=display">
+\begin{split}
+  \pmb{A} = \pmb{LL}^{\top} & = 
+  \left[
+  \begin{matrix}
+    L_{11} & 0  & \cdots & 0 \\
+    L_{21} & L_{22} & \cdots & 0 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    L_{n1} & L_{n2} & \cdots & L_{nn} \\
+  \end{matrix}
+  \right]
+  \left[
+  \begin{matrix}
+    L_{11} & L_{21} & \cdots & L_{n1} \\
+    0 & L_{22} & \cdots & L_{n2} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & \cdots & L_{nn} \\
+  \end{matrix}
+  \right] \\
+  & = 
+  \left[
+  \begin{matrix}
+    L_{11}^{2}   &  &  & \text{symmetric} \\
+    L_{21}L_{11} & L_{21}^{2}+L_{22}^{2}  \\
+    \vdots & \vdots & \ddots \\
+    L_{n1}L_{11} & L_{21}L_{n1} + L_{22}L_{n2} & \cdots & \sum_{i=1}^{n}L_{ni}^{2} \\
+  \end{matrix}
+  \right] \\
+\end{split}
+</script></li>
+<li>As an example assume we wish to generate a random vector <script type="math/tex; ">\pmb{Y}</script> with
+<script type="math/tex; mode=display">
+\mu_{\pmb{Y}}=\left[
+\begin{matrix}
+  15\\
+  20
+\end{matrix}
+\right] \quad \text{and} \quad
+\Sigma_{\pmb{Y}} =
+\left[
+\begin{matrix}
+  6 & 4 \\
+  4 & 9
+\end{matrix}
+\right]
+</script></li>
+<li>Solution by Julia</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Distributions, LinearAlgebra, LaTeXStrings, Random, Plots; pyplot()
+Random.seed!(<span class="hljs-number">1</span>)
+
+N = <span class="hljs-number">10</span>^<span class="hljs-number">5</span>
+
+SigY = [<span class="hljs-number">6</span> <span class="hljs-number">4</span>;
+    <span class="hljs-number">4</span> <span class="hljs-number">9</span>]
+muY = [<span class="hljs-number">15</span>;
+    <span class="hljs-number">20</span>]
+A = cholesky(SigY).L
+
+rngGens = [ ()-&gt;rand(Normal()),
+            ()-&gt;rand(Uniform(-sqrt(<span class="hljs-number">3</span>),sqrt(<span class="hljs-number">3</span>))),
+            ()-&gt;rand(Exponential())-<span class="hljs-number">1</span>]
+
+rv(rg) = A*[rg(), rg()] + muY
+
+data = [[rv(r) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:N] <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> rngGens]
+
+stats(data) = <span class="hljs-keyword">begin</span>
+    data1, data2 = first.(data), last.(data)
+    println(round(mean(data1), digits=<span class="hljs-number">2</span>),<span class="hljs-string">&quot;\t&quot;</span>,round(mean(data2),digits=<span class="hljs-number">2</span>), <span class="hljs-string">&quot;\t&quot;</span>,
+    round(var(data1),digits=<span class="hljs-number">2</span>),<span class="hljs-string">&quot;\t&quot;</span>, round(var(data2),digits=<span class="hljs-number">2</span>), <span class="hljs-string">&quot;\t&quot;</span>,
+    round(cov(data1, data2), digits=<span class="hljs-number">2</span>))
+<span class="hljs-keyword">end</span>
+
+println(<span class="hljs-string">&quot;Mean1\tMean2\tVar1\tVar2\tCov&quot;</span>)
+<span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> data
+    stats(d)
+<span class="hljs-keyword">end</span>
+
+scatter(first.(data[<span class="hljs-number">1</span>]), last.(data[<span class="hljs-number">1</span>]), c=:blue, ms=<span class="hljs-number">1</span>, msw=<span class="hljs-number">0</span>, label=<span class="hljs-string">&quot;Normal&quot;</span>)
+scatter!(first.(data[<span class="hljs-number">2</span>]), last.(data[<span class="hljs-number">2</span>]), c=:red, ms=<span class="hljs-number">1</span>, msw=<span class="hljs-number">0</span>, label=<span class="hljs-string">&quot;Uniform&quot;</span>)
+scatter!(first.(data[<span class="hljs-number">3</span>]), last.(data[<span class="hljs-number">3</span>]), c=:green, ms=<span class="hljs-number">1</span>, msw=<span class="hljs-number">0</span>, label=<span class="hljs-string">&quot;Exponential&quot;</span>,
+    xlims=(<span class="hljs-number">0</span>,<span class="hljs-number">40</span>), ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">40</span>), legend=:bottomright, ratio=:equal,
+    xlabel=<span class="hljs-string">L&quot;X_1&quot;</span>, ylabel=<span class="hljs-string">L&quot;X_2&quot;</span>)
+</code></pre>
+<h2 id="bivariate-normal"><a name="bivariate-normal" class="anchor-navigation-ex-anchor" href="#bivariate-normal"><i class="fa fa-link" aria-hidden="true"></i></a>Bivariate Normal</h2>
+<ul>
+<li>Similartly to the fact that a scalar (<strong><em>univariate</em></strong>) normal distribution is parameterized by the mean <script type="math/tex; ">\mu</script> and variance <script type="math/tex; ">\sigma^{2}</script>, a multivariate normal distribution is parameterized by the mean vector <script type="math/tex; ">\mu_{\pmb{X}}</script> and the covariance matrix <script type="math/tex; ">\Sigma_{\pmb{X}}</script></li>
+<li>We begin first with the <strong><em>standard multivairate</em></strong> having <script type="math/tex; ">\mu_{\pmb{X}}=0</script> and <script type="math/tex; ">\Sigma_{\pmb{X}}=I</script>. In this case, the PDF for the random vector <script type="math/tex; ">\pmb{X} = (X_{1},\cdots,X_{n})</script> is
+<script type="math/tex; mode=display">
+f(x) = (2\pi)^{-n/2}e^{-\frac{1}{2}\pmb{x}^{\top}\pmb{x}}.
+</script></li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> HCubature
+
+M = <span class="hljs-number">4.5</span>
+maxD = <span class="hljs-number">10</span>
+
+f(x) = (<span class="hljs-number">2</span>*<span class="hljs-literal">pi</span>)^(-length(x)/<span class="hljs-number">2</span>)*exp(-<span class="hljs-number">1</span>/<span class="hljs-number">2</span>*x&apos;x)
+
+<span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:maxD
+    a = -M*ones(n)
+    b = M*ones(n)
+    I,e = hcubature(f, a, b, maxevals = <span class="hljs-number">10</span>^<span class="hljs-number">7</span>)
+    println(<span class="hljs-string">&quot;n = <span class="hljs-subst">$(n)</span>, integral = <span class="hljs-subst">$(I)</span>, error (estimate) = <span class="hljs-subst">$(e)</span>&quot;</span>)   
+<span class="hljs-keyword">end</span>
+</code></pre>
+<ul>
+<li>In general, using an affine transformation, it can be shown that for arbitrary <script type="math/tex; ">\mu_{\pmb{X}}</script> and <script type="math/tex; ">\Sigma_{\pmb{X}}</script>,
+<script type="math/tex; mode=display">
+f(\pmb{x}) = \vert \Sigma_{\pmb{X}}\vert^{-1/2}(2\pi)^{-n/2}e^{-\frac{1}{2}(\pmb{x}-\mu_{\pmb{X}})^{\top}\Sigma_{\pmb{X}}^{-1}(\pmb{x}-\mu_{\pmb{X}})}
+</script></li>
+<li>In the case of <script type="math/tex; ">n=2</script>, this becomes the <strong><em>bivarate normal distribution</em></strong> with a density represented as
+<script type="math/tex; mode=display">
+f_{XY}(x,y; \sigma_{X}, \sigma_{Y}, \mu_{X}, \mu_{Y}, \rho) = \frac{1}{2\pi\sigma_{X}\sigma_{Y}\sqrt{1-\rho^{2}}}\\
+\times \exp\bigg\{\frac{-1}{2(1-\rho^{2})}\bigg[\frac{(x-\mu_{X})^{2}}{\sigma^{2}_{X}} - \frac{\rho(x-\mu_{X})(y-\mu_{Y})}{\sigma_{X}\sigma_{Y}}+\frac{(y-\mu_{Y})^{2}}{\sigma^{2}_{Y}}\bigg]\bigg\}
+</script></li>
+<li>Here the elements of the mean and covariance matrix is
+<script type="math/tex; mode=display">
+\mu_{\pmb{X}} = 
+\left[
+\begin{matrix}
+  \mu_{X} \\
+  \mu_{Y}
+\end{matrix}
+\right] \quad
+\text{and}\quad
+\Sigma_{\pmb{Y}} = 
+\left[
+\begin{matrix}
+  \sigma^{2}_{X} & \sigma_{X}\sigma_{Y}\rho \\
+  \sigma_{X}\sigma_{Y}\rho & \sigma^{2}_{Y}
+\end{matrix}
+\right]
+</script></li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Distributions, Plots; pyplot()
+
+include(<span class="hljs-string">&quot;../data/mvParams.jl&quot;</span>)
+biNorm = MvNormal(meanVect, covMat)
+
+N = <span class="hljs-number">10</span>^<span class="hljs-number">3</span>
+points = rand(MvNormal(meanVect, covMat), N)
+
+support = <span class="hljs-number">15</span>:<span class="hljs-number">0.5</span>:<span class="hljs-number">40</span>
+z = [ pdf(biNorm, [x,y]) <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> support, x <span class="hljs-keyword">in</span> support]
+
+p1 = scatter(points[<span class="hljs-number">1</span>,:], points[<span class="hljs-number">2</span>,:], ms=<span class="hljs-number">0.5</span>, c=:black, legend=:none)
+p1 = contour!(support, support, z,
+    levels=[<span class="hljs-number">0.001</span>, <span class="hljs-number">0.005</span>, <span class="hljs-number">0.02</span>], c=[:blue, :red, :green],
+    xlims=(<span class="hljs-number">15</span>,<span class="hljs-number">40</span>), ylims=(<span class="hljs-number">15</span>,<span class="hljs-number">40</span>), ratio=:equal, legend=:none,
+    xlabel=<span class="hljs-string">&quot;x&quot;</span>, ylabel=<span class="hljs-string">&quot;y&quot;</span>)
+p2 = surface(support, support, z, lw=<span class="hljs-number">0.1</span>, c=cgrad([:blue, :red]),
+    legend=:none, xlabel=<span class="hljs-string">&quot;x&quot;</span>, ylabel=<span class="hljs-string">&quot;y&quot;</span>, camera=(-<span class="hljs-number">35</span>,<span class="hljs-number">20</span>))
+
+plot(p1,p2, size=(<span class="hljs-number">800</span>,<span class="hljs-number">400</span>))
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Families of Continuous Distributions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Joint Distributions and Covariance","level":"4.1.7","depth":2,"previous":{"title":"Families of Continuous Distributions","level":"4.1.6","depth":2,"path":"Chap03/06.md","ref":"Chap03/06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","anchor-navigation-ex","mathjax-pro","toolbar","code","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"toolbar":{"buttons":[{"label":"GitHub","icon":"fa fa-home","url":"https://review.mcmz.xyz/","target":"_self"}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chap03/07.md","mtime":"2022-02-09T12:04:17.284Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2022-02-12T07:21:13.516Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
