@@ -1,0 +1,994 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Plots for Single Samples and Time Series · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.23">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04.html" />
+    
+    
+    <link rel="prev" href="02.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Chap01/">
+            
+                <a href="../Chap01/">
+            
+                    
+                    Chapter01 Introducing Julia
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Chap01/01.html">
+            
+                <a href="../Chap01/01.html">
+            
+                    
+                    Language Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Chap01/02.html">
+            
+                <a href="../Chap01/02.html">
+            
+                    
+                    Crash Course by Example
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Chap01/03.html">
+            
+                <a href="../Chap01/03.html">
+            
+                    
+                    Plots, Images and Graphics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Chap01/04.html">
+            
+                <a href="../Chap01/04.html">
+            
+                    
+                    Random Number and Monte Carlo Simulation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Chap01/05.html">
+            
+                <a href="../Chap01/05.html">
+            
+                    
+                    Integration with Other Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../Chap02/">
+            
+                <a href="../Chap02/">
+            
+                    
+                    Chapter02 Basic Probability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../Chap02/01.html">
+            
+                <a href="../Chap02/01.html">
+            
+                    
+                    Random Experiments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../Chap02/02.html">
+            
+                <a href="../Chap02/02.html">
+            
+                    
+                    Working with Sets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../Chap02/03.html">
+            
+                <a href="../Chap02/03.html">
+            
+                    
+                    Independence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../Chap02/04.html">
+            
+                <a href="../Chap02/04.html">
+            
+                    
+                    Conditional Probability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../Chap02/05.html">
+            
+                <a href="../Chap02/05.html">
+            
+                    
+                    Bayes' Rule
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Chap03/">
+            
+                <a href="../Chap03/">
+            
+                    
+                    Chapter03 Probability Distributions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../Chap03/01.html">
+            
+                <a href="../Chap03/01.html">
+            
+                    
+                    Random Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../Chap03/02.html">
+            
+                <a href="../Chap03/02.html">
+            
+                    
+                    Moment-Based Descriptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../Chap03/03.html">
+            
+                <a href="../Chap03/03.html">
+            
+                    
+                    Functions Describing Distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../Chap03/04.html">
+            
+                <a href="../Chap03/04.html">
+            
+                    
+                    Distributions and Related Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../Chap03/05.html">
+            
+                <a href="../Chap03/05.html">
+            
+                    
+                    Families of Discrete Distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../Chap03/06.html">
+            
+                <a href="../Chap03/06.html">
+            
+                    
+                    Families of Continuous Distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../Chap03/07.html">
+            
+                <a href="../Chap03/07.html">
+            
+                    
+                    Joint Distributions and Covariance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter04 Processing and Summarizing Data
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    Working with Data Frames
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    Summarizing Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.1.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    Plots for Single Samples and Time Series
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    Plots for Comparing Two or More Samples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    Plots for Multivariate and High-Dimensional Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    Plots for the Board Room
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    Working with Files and Remote Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Plots for Single Samples and Time Series</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#plots-for-single-samples-and-time-series"><b></b>Plots for Single Samples and Time Series</a></li><ul><li><span class="title-icon "></span><a href="#histogram"><b></b>Histogram</a></li><li><span class="title-icon "></span><a href="#density-plots-and-kernel-density-estimation"><b></b>Density Plots and Kernel Density Estimation</a></li><li><span class="title-icon "></span><a href="#empirical-cumulative-distribution-funcitons"><b></b>Empirical Cumulative Distribution Funcitons</a></li><li><span class="title-icon "></span><a href="#normal-probability-plot"><b></b>Normal Probability Plot</a></li><li><span class="title-icon "></span><a href="#visualizing-time-series"><b></b>Visualizing Time series</a></li><li><span class="title-icon "></span><a href="#radial-plot"><b></b>Radial Plot</a></li></ul></ul></div><h1 id="plots-for-single-samples-and-time-series"><a name="plots-for-single-samples-and-time-series" class="anchor-navigation-ex-anchor" href="#plots-for-single-samples-and-time-series"><i class="fa fa-link" aria-hidden="true"></i></a>Plots for Single Samples and Time Series</h1>
+<h2 id="histogram"><a name="histogram" class="anchor-navigation-ex-anchor" href="#histogram"><i class="fa fa-link" aria-hidden="true"></i></a>Histogram</h2>
+<ul>
+<li>In both the single sample and time-series case, considering frequencies of occurrences is generally an insightful way to visualize the data. The most standard mechanism for plotting frequencies is the <strong><em>histogram</em></strong>. Mathematically, a histogram can be defined as follows. <ol>
+<li>First denote the support of the observations via <script type="math/tex; ">[\ell, m]</script>, where <script type="math/tex; ">\ell</script> is the minimal observation and <script type="math/tex; ">m</script> is the maximal observation.</li>
+<li>Then the interval <script type="math/tex; ">[\ell, m]</script> canbe partitioned into a finite set of <strong><em>bins</em></strong> <script type="math/tex; ">\mathcal{B}_{1}, \cdots, \mathcal{B}_{L}</script>, and the frequency in each bin is recorded via
+<script type="math/tex; mode=display">
+  f_{j} = \frac{1}{n}\sum_{i=1}^{n}\pmb{1}\{x_{i} \in \mathcal{B}_{j}\},\quad \text{for }j = 1,\cdots, L 
+  </script><ul>
+<li>Here <script type="math/tex; ">\pmb{1}\{\cdot\}</script> is <script type="math/tex; ">1</script> if <script type="math/tex; ">x_{i}\in\mathcal{B}_{j}</script> or <script type="math/tex; ">0</script> if <script type="math/tex; ">x_{i}\notin \mathcal{B}_{j}</script></li>
+</ul>
+</li>
+<li>A histogram is then just a visual representation of the discrete probability distribution (the frequencies). One way to plot the frequencies is via a <strong><em>stem plot</em></strong>. However, such a plot cannot represent the widths of the bins. Hence, an alernative representation is via a <strong><em>histogram function</em></strong> <script type="math/tex; ">h(x)</script> which is a scaled plot of the frequencies <script type="math/tex; ">f_{1},\cdots, f_{L}</script>. The function <script type="math/tex; ">h(x)</script> is defined for any <script type="math/tex; ">x\in[\ell, m]</script>. It is constructed by staying constant on all values <script type="math/tex; ">x\in\mathcal{B}_{j}</script>, at a hight of <script type="math/tex; ">f_{j}/\vert \mathcal{j} \vert</script>, where <script type="math/tex; ">\vert \mathcal{B}_{j} \vert</script> is the width of bin <script type="math/tex; ">j</script>. This ensures the total area under the plot is <script type="math/tex; ">1</script>. Hence <script type="math/tex; ">h(x)</script> is actually a probability density function, and can be compared to probability densities.
+<script type="math/tex; mode=display">
+  h(x) = \sum_{j=1}^{L}\frac{f_{j}}{\vert \mathcal{B_{j}} \vert}\pmb{1}\{x\in \mathcal{B}_{j}\} = \frac{f_{b(x)}}{\vert \mathcal{B}_{b(x)} \vert}
+  </script><ul>
+<li>where <script type="math/tex; ">b(x)</script> is the bin of <script type="math/tex; ">x</script>, that is <script type="math/tex; ">x\in\mathcal{B}_{b(x)}</script></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Plots in Julia</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Plots, Distributions, Random; pyplot()
+Random.seed!(<span class="hljs-number">0</span>)
+
+n = <span class="hljs-number">2000</span>
+data = rand(Normal(), n)
+l, m = minimum(data), maximum(data)
+
+delta = <span class="hljs-number">0.3</span>;
+bins = [(x, x + delta) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> l:delta:m-delta]
+<span class="hljs-keyword">if</span> last(bins)[<span class="hljs-number">2</span>] &lt; m
+    push!(bins, (last(bins)[<span class="hljs-number">2</span>], m))
+<span class="hljs-keyword">end</span>
+L = length(bins)
+
+inBin(x,j) = first(bins[j]) &lt;= x &amp;&amp; x &lt; last(bins[j])
+sizeBin(j) = last(bins[j]) - first(bins[j])
+f(j) = sum([inBin(x,j) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> data])/n
+h(x) = sum([f(j)/sizeBin(j) * inBin(x,j) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:L])
+
+xGrid = -<span class="hljs-number">4</span>:<span class="hljs-number">0.01</span>:<span class="hljs-number">4</span>
+histogram(data,normed=<span class="hljs-literal">true</span>, bins=L,
+    label=<span class="hljs-string">&quot;Built-in histogram&quot;</span>,
+    c=:blue, la=<span class="hljs-number">0</span>, alpha=<span class="hljs-number">0.6</span>)
+plot!(xGrid, h.(xGrid), lw=<span class="hljs-number">3</span>, c=:red, label=<span class="hljs-string">&quot;Manual histogram&quot;</span>, 
+    xlabel=<span class="hljs-string">&quot;x&quot;</span>, ylabel=<span class="hljs-string">&quot;Frequency&quot;</span>)
+plot!(xGrid, pdf.(Normal(), xGrid), label=<span class="hljs-string">&quot;True PDF&quot;</span>,
+    lw=<span class="hljs-number">3</span>, c=:green, xlims=(-<span class="hljs-number">4</span>,<span class="hljs-number">4</span>),ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">0.5</span>))
+</code></pre>
+<h2 id="density-plots-and-kernel-density-estimation"><a name="density-plots-and-kernel-density-estimation" class="anchor-navigation-ex-anchor" href="#density-plots-and-kernel-density-estimation"><i class="fa fa-link" aria-hidden="true"></i></a>Density Plots and Kernel Density Estimation</h2>
+<ul>
+<li>A modern and visually appealing alternative to histogram is the <strong><em>smoothed histogram</em></strong>, also known as a <strong><em>density plot</em></strong>, often generated via a <strong><em>kernel density estimate.</em></strong></li>
+<li>This example and the next are based on synthetic data from a <strong><em>mixture model</em></strong>. Such models are useful for situations where we sample from populations made up of heterogeneous sub-populations. Each sub-population has its own probability distribution and these are &quot;mixed&quot; in the process of sampling. At first a <strong><em>latent</em></strong> random variable determines which sub-population is used, and then a sample is taken from that sub-population. In terms of random variable generation, creating a mixture simply involves first randomly selecting which probability distribution is used, and then generating an observation from it. Also, the probability density function of the mixture is a <strong><em>convex combination</em></strong> of the probability density functions of each of the sub-populations. That is, if the <script type="math/tex; ">M</script> sub-populations have densities <script type="math/tex; ">g_{1}(x),\cdots, g_{M}(x)</script> with weights, <script type="math/tex; ">p_{1},\cdots, p_{M}</script> and <script type="math/tex; ">\sum(p_{i}) = 1</script>, then the density of the mixture is
+<script type="math/tex; mode=display">
+f(x) = \sum_{i=1}^{M}p_{1}g_{i}(x)
+</script></li>
+<li>Plot smoothed histogram in Julia<ul>
+<li><code>density()</code></li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Random, Distributions, StatsPlots; pyplot()
+Random.seed!(<span class="hljs-number">0</span>)
+
+mu1, sigma1 = <span class="hljs-number">10</span>, <span class="hljs-number">5</span>
+mu2, sigma2 = <span class="hljs-number">40</span>, <span class="hljs-number">12</span>
+dist1, dist2 = Normal(mu1, sigma1), Normal(mu2, sigma2)
+p = <span class="hljs-number">0.3</span>
+mixRv() = (rand() &lt;= p) ? rand(dist1) : rand(dist2)
+
+n = <span class="hljs-number">2000</span>
+data = [mixRv() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:n]
+
+density(data, c=:blue, label=<span class="hljs-string">&quot;Density via StatsPlots&quot;</span>,
+    xlims=(-<span class="hljs-number">20</span>, <span class="hljs-number">80</span>), ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">0.035</span>))
+stephist!(data, bins=<span class="hljs-number">50</span>, c=:black, norm=<span class="hljs-literal">true</span>,
+    label=<span class="hljs-string">&quot;Histogram&quot;</span>, xlabel=<span class="hljs-string">&quot;x&quot;</span>, ylabel=<span class="hljs-string">&quot;Density&quot;</span>)
+</code></pre>
+<ul>
+<li>A typical way creating a density plot is via <strong><em>kernel density estimation (KDE)</em></strong>, which is a way of fitting a probability function to data. In certain cases, we may wish to have access to the estimated density. For this we use the <code>kde()</code> function from the <code>KernelDensity</code> package.</li>
+<li>Given a set of observations, <script type="math/tex; ">x_{1},\cdots, x_{n}</script>, the KDE is the function,
+<script type="math/tex; mode=display">
+\hat{f}(x) = \frac{1}{n}\sum_{i=1}^{n}\frac{1}{h}K\bigg(\frac{x-x_{i}}{h}\bigg)
+</script><ul>
+<li>where <script type="math/tex; ">K(\cdot)</script> is some specified <strong><em>kernel function</em></strong> and <script type="math/tex; ">h>0</script> is the <strong><em>bandwidth</em></strong> parameter. The kernel function is a function that statisfies the properties of PDF. A typical example is the Gaussian kernel.
+<script type="math/tex; mode=display">
+  K(x) = \frac{1}{\sqrt{2\pi}}e^{-x^{2}/2}
+  </script></li>
+<li>With such a kernel the estimator <script type="math/tex; ">\hat{f}(x)</script> is a PDF because it is a weighted superposition of scaled kernel functions centered about each of the observations. Like histograms, KDEs are not unique as they depend on the type of the observations and more importantly on the bandwith parameter. A very small bandwith implies that the density,
+<script type="math/tex; mode=display">
+  \frac{1}{h}K\bigg(\frac{x-x_{1}}{h}\bigg),
+  </script></li>
+<li>is very concentrated around <script type="math/tex; ">x_{i}</script>. This in turn implies that KDE is comprised of a superposition of very concentrated functions, one for each observation. In contrast, a very large bandwith implies that the density around each observation has a very wide spread. This will make the KDE &quot;smear&quot; over a wide range. Hence ideally, the bandwidth is not too small nor too large.</li>
+<li>For any value of <script type="math/tex; ">h</script>, it can be proved under general conditions that if data is distributed according to some density <script type="math/tex; ">f(\cdot)</script>, then <script type="math/tex; ">\hat{f}(\cdot)</script> converge to <script type="math/tex; ">f(\cdot)</script> when the sample size grows. Nevertheless, in practice, choosing the bandwidth is a key issue in the application of KDE. A default classic rule is <strong><em>Silverman&apos;s rule</em></strong>, which is based on the sample standard deviation of the sample, which is:
+<script type="math/tex; mode=display">
+  h = \bigg(\frac{4}{3}\bigg)^{1/6}sn^{-1/5} \approx 1.06sn^{-1/5}
+  </script></li>
+</ul>
+</li>
+<li>Plots in different <script type="math/tex; ">h</script>.</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Random, Distributions, KernelDensity, Plots;pyplot()
+Random.seed!(<span class="hljs-number">0</span>)
+
+mu1, sigma1 = <span class="hljs-number">10</span>, <span class="hljs-number">5</span>
+mu2, sigma2 = <span class="hljs-number">40</span>, <span class="hljs-number">12</span>
+dist1, dist2 = Normal(mu1, sigma1), Normal(mu2, sigma2)
+p = <span class="hljs-number">0.3</span>
+mixRv() = rand() &lt;= p ? rand(dist1) : rand(dist2)
+mixPDF(x) = p * pdf(dist1,x) + (<span class="hljs-number">1</span>-p) * pdf(dist2,x)
+
+n = <span class="hljs-number">2000</span>
+data = [mixRv() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:n]
+
+kdeDist = kde(data)
+
+xGrid = -<span class="hljs-number">20</span>:<span class="hljs-number">0.1</span>:<span class="hljs-number">80</span>
+pdfKDE = pdf(kdeDist, xGrid)
+
+plot(xGrid, pdfKDE, c=:blue, label=<span class="hljs-string">&quot;KDE PDF&quot;</span>)
+stephist!(data, bins=<span class="hljs-number">50</span>, c=:black, normed=<span class="hljs-literal">true</span>, label=<span class="hljs-string">&quot;Histogram&quot;</span>)
+p1 = plot!(xGrid, mixPDF.(xGrid), c=:red, label=<span class="hljs-string">&quot;Underlying PDF&quot;</span>,
+    xlims=(-<span class="hljs-number">20</span>,<span class="hljs-number">80</span>), ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">0.035</span>), legend=:topleft,
+    xlabel=<span class="hljs-string">&quot;x&quot;</span>, ylabel=<span class="hljs-string">&quot;Density&quot;</span>)
+
+hVals = [<span class="hljs-number">0.5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>]
+kdeS = [kde(data, bandwidth=h) <span class="hljs-keyword">for</span> h <span class="hljs-keyword">in</span> hVals]
+plot(xGrid, pdf(kdeS[<span class="hljs-number">1</span>], xGrid), c = :green, label=<span class="hljs-string">&quot;h=<span class="hljs-subst">$(hVals[<span class="hljs-number">1</span>])</span>&quot;</span>)
+plot!(xGrid, pdf(kdeS[<span class="hljs-number">2</span>], xGrid), c = :blue, label=<span class="hljs-string">&quot;h=<span class="hljs-subst">$(hVals[<span class="hljs-number">2</span>])</span>&quot;</span>)
+p2 = plot!(xGrid, pdf(kdeS[<span class="hljs-number">3</span>], xGrid), c = :purple, label=<span class="hljs-string">&quot;h=<span class="hljs-subst">$(hVals[<span class="hljs-number">3</span>])</span>&quot;</span>,
+    xlims=(-<span class="hljs-number">20</span>, <span class="hljs-number">80</span>), ylims=(<span class="hljs-number">0</span>, <span class="hljs-number">0.035</span>), legend=:topleft,
+    xlabel=<span class="hljs-string">&quot;x&quot;</span>, ylabel=<span class="hljs-string">&quot;Density&quot;</span>)
+plot(p1,p2, size = (<span class="hljs-number">800</span>,<span class="hljs-number">400</span>))
+</code></pre>
+<h2 id="empirical-cumulative-distribution-funcitons"><a name="empirical-cumulative-distribution-funcitons" class="anchor-navigation-ex-anchor" href="#empirical-cumulative-distribution-funcitons"><i class="fa fa-link" aria-hidden="true"></i></a>Empirical Cumulative Distribution Funcitons</h2>
+<ul>
+<li>The <strong><em>Empirical Cumulative Distribution Function (ECDF)</em></strong> can be viewed as an estimate of the underlying CDF. In contrast to histograms and KDEs, ECDFs provide a unique representation of the data not dependent on tuning parameters.</li>
+<li>The ECDF is a stepped funciton which, given <script type="math/tex; ">n</script> data plots, increases by <script type="math/tex; ">1/n</script> at each point. Mathematically, given the sample, <script type="math/tex; ">x_{1},\cdots,x_{n}</script> the ECDF is given by
+<script type="math/tex; mode=display">
+\hat{F}(t) = \frac{1}{n}\sum_{i=1}^{n}\pmb{1}\{x_{i} \le t\} \quad \text{where } \pmb{1}\{\cdot\} \text{ is the indicator function.}
+</script><ul>
+<li>In the case of i.i.d. data from an underlying distribution with CDF <script type="math/tex; ">F(\cdot)</script>, the <strong><em>Glivenko-Cantelli theorem</em></strong> ensures that the ECDF <script type="math/tex; ">\hat{F}(\cdot)</script> approaches <script type="math/tex; ">F(\cdot)</script> as the sample size grows.</li>
+</ul>
+</li>
+<li>Constructing an ECDF in Julia<ul>
+<li><code>ecdf()</code></li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Random, Distributions, StatsBase, Plots; pyplot()
+Random.seed!(<span class="hljs-number">0</span>)
+
+mu1, sigma1 = <span class="hljs-number">10</span>, <span class="hljs-number">5</span>
+mu2, sigma2 = <span class="hljs-number">40</span>, <span class="hljs-number">12</span>
+dist1, dist2 = Normal(mu1, sigma1), Normal(mu2, sigma2)
+p = <span class="hljs-number">0.3</span>
+mixRv() = (rand() &lt;= p) ? rand(dist1) : rand(dist2)
+mixCDF(x) = p * cdf(dist1, x) + (<span class="hljs-number">1</span>-p) * cdf(dist2,x)
+
+n = [<span class="hljs-number">30</span>, <span class="hljs-number">100</span>]
+data1 = [mixRv() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:n[<span class="hljs-number">1</span>]]
+data2 = [mixRv() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:n[<span class="hljs-number">2</span>]]
+
+empiricalCDF1 = ecdf(data1)
+empiricalCDF2 = ecdf(data2)
+
+xGrid = -<span class="hljs-number">10</span>:<span class="hljs-number">0.1</span>:<span class="hljs-number">80</span>
+plot(xGrid, empiricalCDF1.(xGrid), c=:blue, label=<span class="hljs-string">&quot;ECDF with n = <span class="hljs-subst">$(n[<span class="hljs-number">1</span>])</span>&quot;</span>)
+plot!(xGrid, empiricalCDF2.(xGrid), c=:red, label=<span class="hljs-string">&quot;ECDF with n = <span class="hljs-subst">$(n[<span class="hljs-number">2</span>])</span>&quot;</span>)
+plot!(xGrid, mixCDF.(xGrid), c=:black, label=<span class="hljs-string">&quot;Underlying CDF&quot;</span>,
+    xlims=(-<span class="hljs-number">10</span>,<span class="hljs-number">80</span>), ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),
+    xlabel=<span class="hljs-string">&quot;x&quot;</span>, ylabel=<span class="hljs-string">&quot;Probability&quot;</span>, legend=:topleft)
+</code></pre>
+<h2 id="normal-probability-plot"><a name="normal-probability-plot" class="anchor-navigation-ex-anchor" href="#normal-probability-plot"><i class="fa fa-link" aria-hidden="true"></i></a>Normal Probability Plot</h2>
+<ul>
+<li><strong><em>Normal probability plot</em></strong> can be used to indicate if it is likely that a dataset has come from a population that is normally distributed or not. It works by plotting the quantiles of the dataset in question against the theoretical quantiles that one would expect if the sample data came from a normal distribution, and checking if plot is linear. The normal probability plot is actually a special case of the more generalized <strong><em>Q-Q plot</em></strong>, or <strong><em>quantile-quantile plot</em></strong>.</li>
+<li>In order to create a normal probability plot, the data points are first sorted in ascending order, <script type="math/tex; ">x_{1},\cdots, x_{n}</script>, then the quantiles of each data points are calculated. Finally, <script type="math/tex; ">n</script> equally spaced quantiles of the standard normal distribution are calculated, and each ascending quantile pair is then plotted. If the data comes from a normal distribution then we expect the normal probability plot to follow a straight line, otherwise not. An alternative view of the normal probability plot is to think of the ECDF of the data, plotted with the <script type="math/tex; ">y</script>-axis stretched according to the inverse of the CDF of the normal distribution.</li>
+<li>Normal Probability Plot in Julia</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> Random, Distributions, StatsPlots, Plots; pyplot()
+Random.seed!(<span class="hljs-number">0</span>)
+
+mu = <span class="hljs-number">20</span>
+d1, d2 = Normal(mu,mu), Exponential(mu)
+
+n = <span class="hljs-number">100</span>
+data1 = rand(d1, n)
+data2 = rand(d2, n)
+
+qqnorm(data1, c=:blue, ms=<span class="hljs-number">3</span>, msw=<span class="hljs-number">0</span>, label=<span class="hljs-string">&quot;Normal Data&quot;</span>)
+qqnorm!(data2, c=:red, ms=<span class="hljs-number">3</span>, msw=<span class="hljs-number">0</span>, label=<span class="hljs-string">&quot;Exponential Data&quot;</span>,
+    xlabel=<span class="hljs-string">&quot;Normal Theoretical Quantiles&quot;</span>,
+    ylabel=<span class="hljs-string">&quot;Data Quantiles&quot;</span>, legend=:<span class="hljs-literal">true</span>)
+</code></pre>
+<h2 id="visualizing-time-series"><a name="visualizing-time-series" class="anchor-navigation-ex-anchor" href="#visualizing-time-series"><i class="fa fa-link" aria-hidden="true"></i></a>Visualizing Time series</h2>
+<ul>
+<li>In general, when confronted with time-series data, simply plotting a histogram of the data can be misleading because the frequencies in the histogram can be greatly affected by trends or cyclic patterns in the data.</li>
+<li>Nevertheless, <font style="color:#D0104C">in cases where the time-series data appears to be <strong><em>stationary</em></strong>, then a histogram is immediately insightful.</font> Broadly speaking, a stationary sequence is one in which the distributional law of observations does not depend on the exact time.</li>
+<li>Example in Julia<ul>
+<li>The top left plot presents two time series of temperature data in the adjacent locations of Brisbane and Gold Coast Australia. As apparent from the plot, the sequences are clearly non- stationary. This is because of seasonality. The top right plot shows a zoomed-in view of a specific fortnight. The bottom left plot is a time series of the differences in temperatures between Brisbane and Gold Coast. On initial inspection, this time series appears to be stationary. Hence, for the difference, we plot a histogram in the bottom right.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> DataFrames, CSV, Statistics, Dates, Plots, Measures; pyplot()
+
+data = CSV.read(<span class="hljs-string">&quot;../data/temperatures.csv&quot;</span>, DataFrame)
+brisbane = data.Brisbane
+goldcoast = data.GoldCoast
+
+diff = brisbane - goldcoast
+dates = [Date(
+    Year(data.Year[i]),
+    Month(data.Month[i]),
+    Day(data.Day[i])
+) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:nrow(data)]
+fortnightRange = <span class="hljs-number">250</span>:<span class="hljs-number">263</span>
+brisFortnight = brisbane[fortnightRange]
+goldFortnight = goldcoast[fortnightRange]
+
+default(xlabel=<span class="hljs-string">&quot;Time&quot;</span>, ylabel=<span class="hljs-string">&quot;Temperature&quot;</span>)
+<span class="hljs-comment"># default(label=[&quot;Brisbane&quot; &quot;Gold Coast&quot;])</span>
+
+p1 = plot(dates, [brisbane goldcoast], label=[<span class="hljs-string">&quot;Brisbane&quot;</span> <span class="hljs-string">&quot;Gold Coast&quot;</span>],
+    c=[:blue :red], legend=:bottom)
+p2 = plot(dates[fortnightRange], [brisFortnight goldFortnight], label=[<span class="hljs-string">&quot;Brisbane&quot;</span> <span class="hljs-string">&quot;Gold Coast&quot;</span>],
+    c=[:blue :red], m=(:dot, <span class="hljs-number">5</span>, Plots.stroke(<span class="hljs-number">1</span>)), legend=:bottomleft)
+p3 = plot(dates, diff,
+    c=:black, ylabel=<span class="hljs-string">&quot;Temperature Difference&quot;</span>, legend=<span class="hljs-literal">false</span>)
+p4 = histogram(diff, bins=-<span class="hljs-number">4</span>:<span class="hljs-number">0.5</span>:<span class="hljs-number">6</span>, 
+    ylims=(<span class="hljs-number">0</span>,<span class="hljs-number">140</span>), legend=<span class="hljs-literal">false</span>,
+    xlabel=<span class="hljs-string">&quot;Temperature Difference&quot;</span>, ylabel=<span class="hljs-string">&quot;Frequency&quot;</span>)
+plot(p1,p2,p3,p4, size=(<span class="hljs-number">800</span>,<span class="hljs-number">500</span>), margin=<span class="hljs-number">5</span>mm)
+</code></pre>
+<h2 id="radial-plot"><a name="radial-plot" class="anchor-navigation-ex-anchor" href="#radial-plot"><i class="fa fa-link" aria-hidden="true"></i></a>Radial Plot</h2>
+<ul>
+<li>It is often useful to plot time-series data, or cylic data, on a so-called <strong><em>radial plot</em></strong>. Such a plot involves plotting data on a polar coordinate system. This plot can be used to help visualize the nature of dataset comparing the distances of each data point radially from the origin. A variation of the radial plot is the <strong><em>radar plot</em></strong>, which is often used to visualize the levels of different categorical variables on the one plot.</li>
+<li>We present the effect of different forms of <strong><em>smoothing</em></strong> on the time-series data. For this, we carry out a <strong><em>moving average</em></strong> on the data. Roughly, this transforms the original data sequence <script type="math/tex; ">x_{1},\cdots, x_{n}</script> into a smoother sequence <script type="math/tex; ">\tilde{x}_{1}, \cdots, \tilde{x}_{n}</script> via
+<script type="math/tex; mode=display">
+\tilde{x}_{i} = \frac{1}{L}\sum_{j=0}^{L-1}x_{i-j}
+</script><ul>
+<li>Here, each <script type="math/tex; ">\tilde{x}_{i}</script> is the average of the <script type="math/tex; ">L</script> observations <script type="math/tex; ">x_{x_{i-L+1}},\cdots, x_{i}</script> neihboring time <script type="math/tex; ">i</script> in the oringinal sequence. A critical parameter is the <strong><em>window size</em></strong> <script type="math/tex; ">L</script> which determines &quot;how much smoothing&quot; is to be performed, as <script type="math/tex; ">L</script> is increased more smoothing takes place.</li>
+</ul>
+</li>
+<li>Plots in Julia<ul>
+<li><code>moving(f::Function, d::AbstractArray, w::Int)</code>: moving function on data in width <code>w</code></li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-julia"><span class="hljs-keyword">using</span> DataFrames, CSV, Dates, StatsBase, Plots, TimeSeries; pyplot()
+
+data = CSV.read(<span class="hljs-string">&quot;../data/temperatures.csv&quot;</span>, DataFrame, copycols = <span class="hljs-literal">true</span>)
+brisbane = data.Brisbane
+dates = [Date(
+    Year(data.Year[i]),
+    Month(data.Month[i]),
+    Day(data.Day[i])
+) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:nrow(data)]
+
+window1, window2 = <span class="hljs-number">7</span>, <span class="hljs-number">14</span>
+d1 = values(moving(mean, TimeArray(dates, brisbane), window1))
+d2 = values(moving(mean, TimeArray(dates, brisbane), window2))
+
+grid = (<span class="hljs-number">2</span><span class="hljs-literal">pi</span>:-<span class="hljs-number">2</span><span class="hljs-literal">pi</span>/<span class="hljs-number">365</span>:<span class="hljs-number">0</span>) .+ <span class="hljs-literal">pi</span>/<span class="hljs-number">2</span>
+monthNames = Dates.monthname.(dates[<span class="hljs-number">1</span>:<span class="hljs-number">31</span>:<span class="hljs-number">365</span>])
+
+plot(grid, d1[<span class="hljs-number">1</span>:<span class="hljs-number">365</span>], 
+    c=:blue, proj=:polar, label=<span class="hljs-string">&quot;Brisbane weekly average temp.&quot;</span>)
+plot!(grid, d2[<span class="hljs-number">1</span>:<span class="hljs-number">365</span>],
+    xticks=([mod.((<span class="hljs-number">11</span><span class="hljs-literal">pi</span>/<span class="hljs-number">6</span>:-<span class="hljs-literal">pi</span>/<span class="hljs-number">6</span>:<span class="hljs-number">0</span>) .+ <span class="hljs-literal">pi</span>/<span class="hljs-number">2</span>, <span class="hljs-number">2</span><span class="hljs-literal">pi</span>);], monthNames),
+    c=:red, proj=:polar,
+    label=<span class="hljs-string">&quot;Brisbane fortnightly average temp.&quot;</span>, legend=:outerbottom)
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02.html" class="navigation navigation-prev " aria-label="Previous page: Summarizing Data">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04.html" class="navigation navigation-next " aria-label="Next page: Plots for Comparing Two or More Samples">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Plots for Single Samples and Time Series","level":"5.1.3","depth":2,"next":{"title":"Plots for Comparing Two or More Samples","level":"5.1.4","depth":2,"path":"Chap04/04.md","ref":"Chap04/04.md","articles":[]},"previous":{"title":"Summarizing Data","level":"5.1.2","depth":2,"path":"Chap04/02.md","ref":"Chap04/02.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","anchor-navigation-ex","mathjax-pro","toolbar","code","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"toolbar":{"buttons":[{"label":"GitHub","icon":"fa fa-home","url":"https://review.mcmz.xyz/","target":"_self"}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chap04/03.md","mtime":"2022-02-19T13:35:42.203Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2022-04-01T01:02:42.285Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
